@@ -23,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+		$this->app->alias('bugsnag.log', Log::class);
+		$this->app->alias('bugsnag.log', LoggerInterface::class);
     }
 }
