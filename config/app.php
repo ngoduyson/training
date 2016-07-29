@@ -149,6 +149,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
 		Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
+		LucaDegasperi\OAuth2Server\Storage\FluentStorageServiceProvider::class,
+		LucaDegasperi\OAuth2Server\OAuth2ServerServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -205,6 +207,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
 		'Bugsnag' => Bugsnag\BugsnagLaravel\Facades\Bugsnag::class,
+		'Authorizer' => LucaDegasperi\OAuth2Server\Facades\Authorizer::class,
 
     ],
 
