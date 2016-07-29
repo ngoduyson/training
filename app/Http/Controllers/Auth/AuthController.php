@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Benlly\Http\Controllers\Auth;
 
-use App\User;
+use Benlly\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use Benlly\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
