@@ -29,6 +29,12 @@ return [
 
     'grant_types' => [
 
+		'password' => [
+			'class' => '\Benlly\OAuth2\Server\Grant\PasswordGrant',
+			'callback' => '\Benlly\OAuth2\Server\Grant\PasswordGrantVerify@verify',
+			'access_token_ttl' => 3600,
+		]
+
     ],
 
     /*
