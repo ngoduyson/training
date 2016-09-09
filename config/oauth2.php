@@ -32,7 +32,13 @@ return [
 		'password' => [
 			'class' => '\Benlly\OAuth2\Server\Grant\PasswordGrant',
 			'callback' => '\Benlly\OAuth2\Server\Grant\PasswordGrantVerify@verify',
-			'access_token_ttl' => 3600,
+			'access_token_ttl' => 2592000,
+		],
+
+		'refresh_token' => [
+			'class' => '\League\OAuth2\Server\Grant\PasswordGrantVerifier@verify',
+			'access_token_ttl' => 2592000,
+			'refresh_token_ttl' => 7776000
 		]
 
     ],
@@ -105,7 +111,7 @@ return [
     |
     */
 
-    'access_token_ttl' => 3600,
+    'access_token_ttl' => 7776000,,
 
     /*
     |--------------------------------------------------------------------------

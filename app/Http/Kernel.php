@@ -24,13 +24,17 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middlewareGroups = [
-        'web' => [
+        'base' => [
             \Benlly\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             //\Benlly\Http\Middleware\VerifyCsrfToken::class,
         ],
+
+		'web' => [
+			'csrf',
+		],
 
         'api' => [
             'throttle:60,1',
@@ -50,6 +54,7 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Foundation\Http\Middleware\Authorize::class,
         'guest' => \Benlly\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+		'csrf' => \Benlly\Http\Middleware\VerifyCsrfToken::class,
 		'oauth' => \LucaDegasperi\OAuth2Server\Middleware\OAuthMiddleware::class,
 		'oauth-user' => \LucaDegasperi\OAuth2Server\Middleware\OAuthUserOwnerMiddleware::class,
 		'oauth-client' => \LucaDegasperi\OAuth2Server\Middleware\OAuthClientOwnerMiddleware::class,

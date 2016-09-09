@@ -5,4 +5,5 @@ Homestead.yaml
 Homestead.json
 .env
 .vagrant
+tags
 **.DS_Store
