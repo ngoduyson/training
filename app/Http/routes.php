@@ -15,8 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['middleware' => ['api']], function () {
+Route::group(['namespace' => 'Api', 'middleware' => ['api'],], function () {
+
 	Route::post('oauth/access_token', function () {
 		return Response::json(Authorizer::issueAcessToken());
+	});
+
+	Rout::group(['middleware' => ['oauth']], function() {
 	});
 });

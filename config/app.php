@@ -148,6 +148,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+		Prettus\Repository\Providers\RepositoryServiceProvider::class,
 		Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
 		LucaDegasperi\OAuth2Server\Storage\FluentStorageServiceProvider::class,
 		LucaDegasperi\OAuth2Server\OAuth2ServerServiceProvider::class,

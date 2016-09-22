@@ -29,6 +29,12 @@ return [
 
     'grant_types' => [
 
+		'register' => [
+			'class' => 'Benlly\OAuth2\Server\Grant\RegisterGrant',
+			'callback' => 'Benlly\OAuth2\Server\Grant\RegisterGrantVerifier@verify',
+			'access_token_ttl' => 259200,
+		]
+
 		'password' => [
 			'class' => '\Benlly\OAuth2\Server\Grant\PasswordGrant',
 			'callback' => '\Benlly\OAuth2\Server\Grant\PasswordGrantVerify@verify',
@@ -38,8 +44,8 @@ return [
 		'refresh_token' => [
 			'class' => '\League\OAuth2\Server\Grant\PasswordGrantVerifier@verify',
 			'access_token_ttl' => 2592000,
-			'refresh_token_ttl' => 7776000
-		]
+			'refresh_token_ttl' => 7776000,
+		],
 
     ],
 

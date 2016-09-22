@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => Benlly\User::class,
+            'model' => Benlly\Entities\User::class,
         ],
 
         // 'users' => [

@@ -9,7 +9,7 @@ class PasswordGrantVerifier
 	public function verify ($clientId, $username, $password) {
 		$credentials = [
 			'oauth_client_id' => $clientId,
-			'email' => $username,
+			'login' => $username,
 			'password' => $password,
 		];
 
